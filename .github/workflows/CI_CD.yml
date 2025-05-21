@@ -17,9 +17,9 @@ jobs:
         distribution: 'temurin'
 
     ## Create YML
-    - name : Create application-secret.yml File
-      run : |
-        echo "${{secrets.SECRET_PROPERTIES }}" > ./src/main/resources/application.yml
+    - name: Create application-secret.yml File
+      run: |
+        echo "${{ secrets.SECRET_PROPERTIES }}" > ./src/main/resources/application.yml
         find src
         
     ## Permission for gradlew
@@ -32,8 +32,8 @@ jobs:
       run: ./gradlew bootJar
 
     ## Docker Login
-    - name : Login to Docker Hub
-      uses : docker/login-action@v2
+    - name: Login to Docker Hub
+      uses: docker/login-action@v2
       with:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
@@ -52,6 +52,11 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-              sudo docker rm -f $(sudo docker ps -qa) # Remove all running containers
-              sudo docker pull ${{ secrets.DOCKER_USERNAME }}/{{ secrets.DOCKER_REPO }}
-              sudo docker run -d -p 8080:8080 ${{ secrets.DOCKER_USERNAME }}/{{ secrets.DOCKER_REPO }}
+          
+              if [ "$(docker ps -aq -f name=${{secrets.DOCKER_REPO}})" ]; then
+              docker stop ${{secrets.DOCKER_REPO}}
+              docker rm ${{secrets.DOCKER_REPO}}
+              fi
+              
+              sudo docker pull ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_REPO }}
+              sudo docker run -d -p 8080:8080 ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_REPO }}
