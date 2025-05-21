@@ -41,8 +41,8 @@ jobs:
     ## Build and Push to Docker Hub
     - name: Docker build & push to Hub
       run: |
-        docker build -f Dockerfile -t ${{ secrets.DOCKER_USERNAME }}/{{ secrets.DOCKER_REPO }} .
-        docker push ${{ secrets.DOCKER_USERNAME }}/{{ secrets.DOCKER_REPO }}
+        docker build -f Dockerfile -t ${{ secrets.DOCKER_USERNAME }}/${ secrets.DOCKER_REPO }} .
+        docker push ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_REPO }}
       
     ## Deploy EC2
     - name: Deploy to EC2
