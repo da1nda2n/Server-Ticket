@@ -29,7 +29,7 @@ jobs:
       
     ## Build Gradle
     - name: Build with Gradle  
-      run: ./gradlew build
+      run: ./gradlew bootJar
 
     ## Build and Push to Docker Hub
     - name: Docker build & push to Hub
@@ -43,7 +43,7 @@ jobs:
       uses: appleboy/ssh-action@master
       with:
           host: ${{ secrets.HOST }}
-          username: ${{ secrets.SSH_KEY }}
+          username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSH_KEY }}
           script: |
               sudo docker rm -f $(sudo docker ps -qa) # Remove all running containers
