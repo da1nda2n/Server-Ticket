@@ -1,0 +1,35 @@
+2025-05-14T13:14:02.050+09:00  INFO 17840 --- [ticketing] [main] c.e.ticketing.TicketingApplication       : Starting TicketingApplication using Java 17.0.12 with PID 17840 (D:\study\server-study-17th\contents\dain\ticketing\build\classes\java\main started by dain0 in D:\study\server-study-17th\contents\dain\ticketing)
+2025-05-14T13:14:02.055+09:00  INFO 17840 --- [ticketing] [main] c.e.ticketing.TicketingApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-05-14T13:14:02.821+09:00  INFO 17840 --- [ticketing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-14T13:14:02.880+09:00  INFO 17840 --- [ticketing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 3 JPA repository interfaces.
+2025-05-14T13:14:03.357+09:00  INFO 17840 --- [ticketing] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-14T13:14:03.367+09:00  INFO 17840 --- [ticketing] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-14T13:14:03.368+09:00  INFO 17840 --- [ticketing] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-05-14T13:14:03.427+09:00  INFO 17840 --- [ticketing] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-14T13:14:03.428+09:00  INFO 17840 --- [ticketing] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1329 ms
+2025-05-14T13:14:03.558+09:00  INFO 17840 --- [ticketing] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-14T13:14:03.628+09:00  INFO 17840 --- [ticketing] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-05-14T13:14:03.670+09:00  INFO 17840 --- [ticketing] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-14T13:14:03.965+09:00  INFO 17840 --- [ticketing] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-14T13:14:03.994+09:00  INFO 17840 --- [ticketing] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-14T13:14:04.255+09:00  INFO 17840 --- [ticketing] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4dac40b
+2025-05-14T13:14:04.257+09:00  INFO 17840 --- [ticketing] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-14T13:14:04.309+09:00  WARN 17840 --- [ticketing] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-14T13:14:04.310+09:00  WARN 17840 --- [ticketing] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-05-14T13:14:05.188+09:00  INFO 17840 --- [ticketing] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-14T13:14:05.288+09:00  INFO 17840 --- [ticketing] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-14T13:14:05.696+09:00  INFO 17840 --- [ticketing] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-05-14T13:14:06.618+09:00  INFO 17840 --- [ticketing] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-14T13:14:06.630+09:00  INFO 17840 --- [ticketing] [main] c.e.ticketing.TicketingApplication       : Started TicketingApplication in 5.18 seconds (process running for 5.885)
+2025-05-14T13:14:22.108+09:00  INFO 17840 --- [ticketing] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-14T13:14:22.109+09:00  INFO 17840 --- [ticketing] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-14T13:14:22.111+09:00  INFO 17840 --- [ticketing] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-05-14T13:14:23.643+09:00  INFO 17840 --- [ticketing] [http-nio-8080-exec-8] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 882 ms
+2025-05-14T13:15:11.244+09:00  INFO 17840 --- [ticketing] [http-nio-8080-exec-9] c.e.ticketing.person.PersonService       : [회원가입 시도] loginId: test514
+2025-05-14T13:15:11.935+09:00  INFO 17840 --- [ticketing] [http-nio-8080-exec-9] c.e.ticketing.person.PersonService       : [회원가입 성공] loginId: test514
+2025-05-14T13:15:39.320+09:00  INFO 17840 --- [ticketing] [http-nio-8080-exec-3] c.e.ticketing.person.PersonService       : [로그인 시도] loginId: test514
+2025-05-14T13:15:39.682+09:00  INFO 17840 --- [ticketing] [http-nio-8080-exec-3] c.e.ticketing.person.PersonService       : [로그인 성공] loginId: test514
+2025-05-14T13:41:35.632+09:00  INFO 17840 --- [ticketing] [http-nio-8080-exec-7] c.e.ticketing.person.PersonService       : [로그인 시도] loginId: test514
+2025-05-14T13:41:35.880+09:00  INFO 17840 --- [ticketing] [http-nio-8080-exec-7] c.e.ticketing.person.PersonService       : [로그인 성공] loginId: test514
+2025-05-14T13:42:20.262+09:00  WARN 17840 --- [ticketing] [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `com.example.ticketing.show.ShowState` from String "RESERVATION": not one of the values accepted for Enum class: [COMPLETED, BEFORE_RESERVATION, DURING_RESERVATION]]
+2025-05-14T14:19:02.941+09:00  WARN 17840 --- [ticketing] [http-nio-8080-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `com.example.ticketing.show.ShowState` from String "RESERVATION": not one of the values accepted for Enum class: [COMPLETED, BEFORE_RESERVATION, DURING_RESERVATION]]
