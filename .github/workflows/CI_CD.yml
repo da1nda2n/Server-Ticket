@@ -60,6 +60,7 @@ jobs:
               fi
               
               sudo docker pull ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_REPO }}
-              sudo docker run -d -p 8080:8080 \
-                  ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_REPO }}  \
-                  --name ${{ secrets.DOCKER_REPO }}
+              sudo docker run -d \
+              --name ${{ secrets.DOCKER_REPO }} \
+              -p 8080:8080 \
+              ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_REPO }}
